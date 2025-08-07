@@ -1,0 +1,13 @@
+Configurando o GIT
+git config --global user.name lukus-git
+git config --global user.email lucas.garbi13@hotmail.com
+
+listar os SDK
+dotnet --list-sdks
+
+Criando um projeto MVC
+dotnet new mvc -o BlogGarbi
+
+executar projeto
+cd BlogGarbi
+dotnet watch run
