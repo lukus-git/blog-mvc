@@ -35,7 +35,7 @@ public class HomeController : Controller
                 Id = 1,
                 Nome = "Falta pouco para o arco da Guerra de Sucessão ser retomado",
                 CategoriaId = 1,
-                Categoria = hunter,
+                Categoria = manga,
                 DataPostagem = DateTime.Parse("07/08/2025"),
                 Descricao = "O mangá de Hunter x Hunter, um dos mais conhecidos e aclamados da indústria, está prestes a retornar! De verdade, desta vez.",
                 Texto = "",
@@ -56,7 +56,7 @@ public class HomeController : Controller
             },
             new(){
                 Id = 2,
-                Nome = " Em qual arco o mangá parou?",
+                Nome = "Quando o mangá retorna?",
                 CategoriaId = 2,
                 Categoria = manga,
                 DataPostagem = DateTime.Parse("07/08/2025"),
@@ -73,13 +73,18 @@ public class HomeController : Controller
                 DataPostagem = DateTime.Parse("07/08/2025"),
                 Descricao = "Existem dois animes de Hunter x Hunter, e a diferença entre eles é que um cobriu mais arcos do mangá do que o outro. Além de, é claro, o estúdio e a época de produção.",
                 Texto = "",
-                Thumbnail = "/img/3.jpg",
+                Thumbnail = "/img/4.jpg",
                 Foto = "/img/4.jpg"
             }
         ];
         
 
         return View(postagens);
+    }
+
+    public IActionResult Postagem()
+    {
+        return View();
     }
 
     public IActionResult Privacy()
