@@ -17,29 +17,69 @@ public class HomeController : Controller
     {
         ViewData["Mensagem"] = "ola mundo";
         //Criar objetos
-        Categoria categoria = new();
-        categoria.Id = 1;
-        categoria.Nome = "Tecnologia";
+        Categoria manga = new();
+        manga.Id = 1;
+        manga.Nome = "hunter";
 
-        Categoria categoria2 = new()
+        Categoria hunter = new()
         {
             Id = 2,
-            Nome = "IA"
+            Nome = "hunter"
         };
 
+        Categoria eletronicos = new(3, "mangá");
+    //fim
+    
         List<Postagem> postagens = [
             new(){
                 Id = 1,
-                Nome = "Saiu o ChatGPT 5!!!",
-                CategoriaId = 2,
-                Categoria = categoria2,
+                Nome = "Falta pouco para o arco da Guerra de Sucessão ser retomado",
+                CategoriaId = 1,
+                Categoria = hunter,
                 DataPostagem = DateTime.Parse("07/08/2025"),
-                Descricao = "estou com preguiça de pensar nisso",
-                Texto = "Lorem"
+                Descricao = "O mangá de Hunter x Hunter, um dos mais conhecidos e aclamados da indústria, está prestes a retornar! De verdade, desta vez.",
+                Texto = "",
+                Thumbnail = "/img/1.jpg",
+                Foto = "/img/1.jpg"
+            },
+            
+            new(){
+                Id = 2,
+                Nome = " Em qual arco o mangá parou?",
+                CategoriaId = 2,
+                Categoria = manga,
+                DataPostagem = DateTime.Parse("07/08/2025"),
+                Descricao = "O último hiato de Hunter x Hunter foi anunciado no final de 2022, logo após a publicação do capítulo #400 — que faz parte do nono arco da história, a Guerra da Sucessão.",
+                Texto = "",
+                Thumbnail = "/img/2.jpg",
+                Foto = "/img/2.jpg"
+            },
+            new(){
+                Id = 2,
+                Nome = " Em qual arco o mangá parou?",
+                CategoriaId = 2,
+                Categoria = manga,
+                DataPostagem = DateTime.Parse("07/08/2025"),
+                Descricao = "A editora Shueisha afirma que o mangá de Hunter x Hunter retorna no dia 7 de outubro, com o capítulo #401 sendo publicado na 45ª edição da revista Weekly Shonen Jump, no Japão.",
+                Texto = "",
+                Thumbnail = "/img/3.jpg",
+                Foto = "/img/3.jpg"
+            },
+            new(){
+                Id = 3,
+                Nome = "E o anime?",
+                CategoriaId = 3,
+                Categoria = manga,
+                DataPostagem = DateTime.Parse("07/08/2025"),
+                Descricao = "Existem dois animes de Hunter x Hunter, e a diferença entre eles é que um cobriu mais arcos do mangá do que o outro. Além de, é claro, o estúdio e a época de produção.",
+                Texto = "",
+                Thumbnail = "/img/3.jpg",
+                Foto = "/img/4.jpg"
             }
         ];
+        
 
-        return View();
+        return View(postagens);
     }
 
     public IActionResult Privacy()
